@@ -1,0 +1,42 @@
+body{
+    width: 100%;
+    height: auto;
+}
+.container{
+    width: 50%;
+    height: 500px;
+    background-color: aqua;
+    margin: 20px auto;
+}
+.one{
+    width:20%;
+    height: 200px;
+    background-color: blue;
+    margin-bottom: 10px;
+    animation: all 2s linear forwards;
+}
+@keyframes all{
+    0%{
+        transform: translate(0,-1000px);
+    }
+    100%{
+        transform: translate(80px,0);
+    }
+}
+.two{
+    width:20%;
+    height: 200px;
+    background-color: blue;
+    animation-name: young;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes young{
+    0%{
+        transform: translate(-1000px,0);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}

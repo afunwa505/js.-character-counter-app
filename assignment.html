@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            background:url("nasa.jpg");
+            color: white;
+            font-family:'Courier New', Courier, monospace;
+        }
+        textarea{
+            width: 40%;
+            height: 300px;
+            line-height: 1.5em;
+        padding: 10px;        
+        margin:40px 30% 10px;
+        outline: none;
+        font-size: larger;
+        }
+        #count{
+            width: 42%;
+            height: 50px;
+            background: white;
+            color: black;
+         margin:10px 30% ;
+         padding-top: 20px; 
+        text-align: center;
+        font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <center>
+      <h1>NUMBER OF CHARACTER COUNTER AND PAGE INDICATOR</h1>  
+    </center>
+    <form>
+        <textarea name="txt1" class="text1" placeholder="text here" rows="10" cols="30">
+    
+        </textarea>
+        <br>
+        <br>
+        <div id="count">
+    
+        </div>
+    </form>
+    <script>
+
+        let textarea= document.querySelector('textarea')
+        let count= document.getElementById('count')
+        textarea.onkeyup= (e) => {
+            
+            count.innerHTML = (0 +e.target.value.length ) + ' ' + "characters / page one";   
+        
+            if(e.target.value.length >100 && e.target.value.length<200){
+                
+            count.innerHTML = (0 +e.target.value.length) + ' ' + "characters / page two";  
+            }else if(e.target.value.length >199 && e.target.value.length<400){
+                
+                count.innerHTML = (0 +e.target.value.length) + ' ' + "characters / page three";  
+                }
+            else{
+                
+                count.innerHTML = (0 +e.target.value.length) + ' ' + "characters / page one";  
+                }
+        };
+    </script>
+</body>
+</html>
